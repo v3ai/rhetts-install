@@ -12,10 +12,10 @@ sudo apt install git
 
 git clone https://github.com/v3ai/micro-all
 
-cd ~/.config/micro
+cd $HOME/.config/micro
 sudo rm -rf *
-cd ~/micro-all
-mv * ~/.config/micro
+
+mv -v $HOME/micro-all/* $HOME/.config/micro
 
 
 
@@ -46,3 +46,5 @@ sudo apt install -f ./dist/input-remapper-2.0.1.deb
 
 sudo apt-get update
 sudo apt-get install inkscape
+
+cd
