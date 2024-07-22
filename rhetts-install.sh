@@ -13,6 +13,7 @@ mkdir /home/$u/Isofiles
 cd /usr/bin
 curl https://getmic.ro | sudo sh
 
+micro
 
 sudo apt install git -y
 
@@ -47,7 +48,7 @@ cd /home/$u
 sudo apt install git python3-setuptools gettext -y
 git clone https://github.com/sezanzeb/input-remapper.git
 cd input-remapper && ./scripts/build.sh
-sudo apt install -f ./dist/input-remapper-2.0.1.deb
+sudo apt install -f ./dist/input-remapper-2.0.1.deb -y
 
 
 #inkscape
