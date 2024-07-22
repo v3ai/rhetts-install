@@ -1,13 +1,13 @@
 #!/bin/bash
 
 
-user=$(logname)
+u=$(logname)
+
+echo "user is $u"
 
 sudo apt update
 
-
-
-mkdir /home/$user/Isofiles
+mkdir /home/$u/Isofiles
 
 
 cd /usr/bin
@@ -16,20 +16,19 @@ curl https://getmic.ro | sudo sh
 
 sudo apt install git
 
-cd /home/$user
+cd /home/$u
 
 git clone https://github.com/v3ai/micro-all
 
-cd /home/$user/.config/micro
+cd /home/$u/.config/micro
 
 sudo rm -rf *
 
-mv -v /home/$user/micro-all/* /home/$user/.config/micro
+mv -v /home/$u/micro-all/* /home/$u/.config/micro
 
 
 
 sudo apt install kicad
-
 
 sudo rm /etc/apt/preferences.d/nosnap.pref
 
@@ -43,7 +42,7 @@ sudo snap install --edge freecad
 
 #input remapper
 
-cd /home/$user
+cd /home/$u
 
 sudo apt install git python3-setuptools gettext
 git clone https://github.com/sezanzeb/input-remapper.git
@@ -56,4 +55,4 @@ sudo apt install -f ./dist/input-remapper-2.0.1.deb
 sudo apt-get update
 sudo apt-get install inkscape
 
-cd /home/$user
+cd /home/$u
