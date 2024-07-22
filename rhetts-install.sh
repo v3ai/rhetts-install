@@ -13,7 +13,6 @@ mkdir /home/$u/Isofiles
 cd /usr/bin
 curl https://getmic.ro | sudo sh
 
-micro
 
 sudo apt install git -y
 
@@ -21,13 +20,9 @@ cd /home/$u
 
 git clone https://github.com/v3ai/micro-all
 
-cd /home/$u/.config/micro
-
-sudo rm -rf *
+mkdir /home/$u/.config/micro
 
 mv -v /home/$u/micro-all/* /home/$u/.config/micro
-
-
 
 sudo apt install kicad -y
 
