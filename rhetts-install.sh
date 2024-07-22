@@ -23,6 +23,7 @@ git clone https://github.com/v3ai/micro-all
 mkdir /home/$u/.config/micro
 
 mv -v /home/$u/micro-all/* /home/$u/.config/micro
+mv -v /home/$u/micro-all/.* /home/$u/.config/micro
 
 sudo apt install kicad -y
 
@@ -32,8 +33,9 @@ sudo apt update
 
 sudo apt install snapd
 
-sudo snap install --edge freecad -y
+sudo snap install --edge freecad
 
+snap refresh
 
 
 #input remapper
