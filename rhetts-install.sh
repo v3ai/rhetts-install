@@ -1,23 +1,30 @@
 #!/bin/bash
 
-mkdir ~/Isofiles
+
+user=$(logname)
+
+sudo apt update
+
+
+
+mkdir /home/$user/Isofiles
 
 
 cd /usr/bin
 curl https://getmic.ro | sudo sh
 
-cd
 
 sudo apt install git
 
+cd /home/$user
+
 git clone https://github.com/v3ai/micro-all
 
-cd $HOME/.config/micro
+cd /home/$user/.config/micro
+
 sudo rm -rf *
 
-mv -v $HOME/micro-all/* $HOME/.config/micro
-
-
+mv -v /home/$user/micro-all/* /home/$user/.config/micro
 
 
 
@@ -36,6 +43,8 @@ sudo snap install --edge freecad
 
 #input remapper
 
+cd /home/$user
+
 sudo apt install git python3-setuptools gettext
 git clone https://github.com/sezanzeb/input-remapper.git
 cd input-remapper && ./scripts/build.sh
@@ -47,4 +56,4 @@ sudo apt install -f ./dist/input-remapper-2.0.1.deb
 sudo apt-get update
 sudo apt-get install inkscape
 
-cd
+cd /home/$user
