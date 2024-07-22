@@ -2,7 +2,9 @@
 
 mkdir ~/Isofiles
 
-curl https://getmic.ro | bash
+
+cd /usr/bin
+curl https://getmic.ro | sudo sh
 
 cd
 
