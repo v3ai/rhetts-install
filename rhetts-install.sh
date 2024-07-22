@@ -24,7 +24,7 @@ mv -v $HOME/micro-all/* $HOME/.config/micro
 sudo apt install kicad
 
 
-sudo mv /etc/apt/preferences.d/nosnap.pref ~/Documents/nosnap.backup
+sudo rm /etc/apt/preferences.d/nosnap.pref
 
 sudo apt update
 
