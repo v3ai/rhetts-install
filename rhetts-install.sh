@@ -5,6 +5,12 @@ u=$(logname)
 
 echo "user is $u"
 
+wget https://raw.githubusercontent.com/v3ai/cinnamon.dconf/main/cinnamon.dconf
+
+dconf load /org/cinnamon/ < cinnamon.dconf
+
+sudo su
+
 sudo apt update
 
 mkdir /home/$u/Isofiles
