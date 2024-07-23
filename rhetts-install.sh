@@ -27,7 +27,7 @@ mv -v /home/$u/micro-all/.* /home/$u/.config/micro
 
 #
 cd /home/$u
-curl https://raw.githubusercontent.com/v3ai/desktop.dconf/main/desktop.dconf
+curl -O https://raw.githubusercontent.com/v3ai/desktop.dconf/main/desktop.dconf
 dconf load /org/cinnamon/desktop/ < desktop.dconf
 #
 
