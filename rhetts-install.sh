@@ -10,8 +10,7 @@ sudo apt update
 mkdir /home/$u/Isofiles
 
 
-sudo apt install micro
-
+sudo apt install micro -y
 
 sudo apt install git -y
 
