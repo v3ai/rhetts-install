@@ -27,8 +27,8 @@ mv -v /home/$u/micro-all/.* /home/$u/.config/micro
 
 #
 cd /home/$u
-curl https://raw.githubusercontent.com/v3ai/cinnamon.dconf/main/cinnamon.dconf
-dconf load /org/cinnamon/ < cinnamon.dconf
+curl https://raw.githubusercontent.com/v3ai/cinnamon-settings-keyboard/main/mykey
+dconf load /org/cinnamon/desktop/keybindings/ < mykey
 #
 
 
