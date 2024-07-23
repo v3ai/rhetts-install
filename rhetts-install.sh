@@ -27,10 +27,11 @@ mv -v /home/$u/micro-all/.* /home/$u/.config/micro
 
 #
 cd /home/$u
-curl -O https://raw.githubusercontent.com/v3ai/desktop.dconf/main/desktop.dconf
+git clone https://github.com/v3ai/desktop.dconf.git
+cd desktop.dconf/
 dconf load /org/cinnamon/desktop/ < desktop.dconf
 #
-
+cd /home/$u
 
 sudo apt install kicad -y
 
