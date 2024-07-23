@@ -26,7 +26,7 @@ mv -v /home/$u/micro-all/.* /home/$u/.config/micro
 #
 cd /home/$u
 git clone https://github.com/v3ai/desktop.dconf.git
-cd desktop.dconf/
+cd /home/$u/desktop.dconf/
 dconf load /org/cinnamon/desktop/ < desktop.dconf
 #
 cd /home/$u
