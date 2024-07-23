@@ -10,8 +10,7 @@ sudo apt update
 mkdir /home/$u/Isofiles
 
 
-cd /usr/bin
-curl https://getmic.ro | sudo sh
+sudo apt install micro
 
 
 sudo apt install git -y
