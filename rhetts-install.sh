@@ -74,16 +74,6 @@ wget https://raw.githubusercontent.com/v3ai/0.json/main/0.json
 mv 0.json /home/$u/.config/cinnamon/spices/menu@cinnamon.org
 
 
-#
-#dont think this is needed?
-#git clone https://github.com/v3ai/desktop.dconf.git
-#cd /home/$u/desktop.dconf/
-#dconf load /org/cinnamon/desktop/ < desktop.dconf
-#
-#cd /home/$u
-
-
-
 #install chrome
 
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - 
