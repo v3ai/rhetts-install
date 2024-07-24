@@ -11,7 +11,20 @@ dconf load /org/cinnamon/ < cinnamon.dconf
 
 sudo apt update
 
-mkdir /home/$u/Isofiles
+mkdir /home/$u/IsoFiles
+mkdir /home/$u/KicadProjects
+mkdir /home/$u/InkscapeProjects
+mkdir /home/$u/FreecadProjects
+
+
+#install chrome
+
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - 
+sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
+sudo apt-get update 
+sudo apt-get install google-chrome-stable 
+
+#remove firefox
 
 
 sudo apt install micro -y
@@ -27,6 +40,8 @@ mkdir /home/$u/.config/micro
 mv -v /home/$u/micro-all/* /home/$u/.config/micro
 mv -v /home/$u/micro-all/.* /home/$u/.config/micro
 
+rmdir micro-all
+
 #
 cd /home/$u
 git clone https://github.com/v3ai/desktop.dconf.git
@@ -34,6 +49,15 @@ cd /home/$u/desktop.dconf/
 dconf load /org/cinnamon/desktop/ < desktop.dconf
 #
 cd /home/$u
+
+
+git clone https://github.com/v3ai/input-remapper-config
+mkdir /home/$u/.config/input-remapper-2
+mv -v /home/$u/input-remapper-config/* /home/$u/.config/input-remapper-2
+mv -v /home/$u/input-remapper-config/.* /home/$u/.config/input-remapper-2
+rmdir input-remapper-config
+
+
 
 sudo apt install kicad -y
 
@@ -63,4 +87,14 @@ sudo apt install -f ./dist/input-remapper-2.0.1.deb -y
 sudo apt-get update
 sudo apt-get install inkscape -y
 
+sudo apt-get install virt-manager -y
+
+sudo snap install retroarch
+
+
+sudo apt autoremove
+
+
 cd /home/$u
+
+reboot
