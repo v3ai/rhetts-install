@@ -101,22 +101,18 @@ sudo snap install retroarch
 
 snap install blender --classic
 
-sudo apt install htop
+sudo apt install htop -y
 
 
 #remove firefox
 
-sudo apt purge firefox
+sudo apt purge firefox -y
 
 #remove any garbage
-sudo apt autoremove
+sudo apt autoremove -y
 
 #ugrade to newest
-sudo apt upgrade
-
-#remove this very install script
-rm rhetts-install.sh
-
+sudo apt upgrade -y
 
 #self explanatory
 reboot
